@@ -1,0 +1,111 @@
+*ctrlp-ssh.txt*
+A ctrlp.vim extension - SSH via ctrlp.vim interface
+Version: 0.0.1
+Author:  Takahiro Yoshihara <http://github.com/tacahiroy>
+
+
+==============================================================================
+CONTENTS					*ctrlp-ssh-contents* *ctrlp-ssh*
+
+|ctrlp-ssh-intro|		Introduction
+|ctrlp-ssh-commands|		Commands
+|ctrlp-ssh-settings|		Settings
+|ctrlp-ssh-changelog|		changelog
+|ctrlp-ssh-license|		License
+|ctrlp-ssh-about|		About
+
+
+==============================================================================
+INTRODUCTION					*ctrlp-ssh-intro*
+
+ctrl-ssh is an extension of ctrlp.vim.
+This depends on tmux to open a new SSH window.
+
+==============================================================================
+COMMANDS					*ctrlp-ssh-commands*
+
+This plugin provides just one command named |:CtrlPSSH|. Just execute it.
+
+						*ctrlp-ssh-:CtrlPSSH*
+:CtrlPSSH
+
+Defining a mapping for this command should be useful. >
+	nnoremap <Leader>fs :CtrlPSSH<Cr>
+<
+
+
+==============================================================================
+SETTINGS					*ctrlp-ssh-settings*
+You can customise behaviour of ctrlp-ssh using these variables.
+
+
+						*g:ctrlp_ssh_known_hosts_file*
+This is the path to known_hosts file or a something similar file.
+If you would not like to specify $HOME/.ssh/known_hosts file, then you can
+specify a file which includes a host name in each line.
+By default, this is set known_hosts file located in your home directory.
+>
+	let g:ctrlp_ssh_known_hosts_file = $HOME . '/.ssh/known_hosts'
+<
+						*g:ctrlp_ssh_runner*
+This is a runner which opens a SSH window.
+Currently, only the default value 'tmux' can be specified.
+>
+	let g:ctrlp_ssh_runner = 'tmux'
+<
+
+
+==============================================================================
+THANKS						*ctrlp-ssh-thanks*
+
+  * kien <https://github.com/kien> - the author of ctrlp.vim
+
+
+==============================================================================
+CHANGELOG 					*ctrlp-ssh-changelog*
+
+30 Jul 2013~
+  + Initial release.
+
+
+==============================================================================
+LICENSE						*ctrlp-ssh-license*
+
+|ctrlp-ssh| is released under the Modified BSD License.
+
+Copyright (c) 2013, Takahiro Yoshihara All rights reserved.
+
+Redistribution and use in source and binary forms, with or without modification,
+are permitted provided that the following conditions are met:
+
+  Redistributions of source code must retain the above copyright notice, this
+  list of conditions and the following disclaimer.
+
+  Redistributions in binary form must reproduce the above copyright notice, this
+  list of conditions and the following disclaimer in the documentation and/or
+  other materials provided with the distribution.
+
+  Neither the name of the {organization} nor the names of its
+  contributors may be used to endorse or promote products derived from
+  this software without specific prior written permission.
+
+THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND
+ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED
+WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE
+DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE FOR
+ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES
+(INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES;
+LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON
+ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
+(INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS
+SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+
+==============================================================================
+ABOUT                                           *ctrlp-ssh-about*
+
+The latest version is available on GitHub:
+
+https://github.com/tacahiroy/ctrlp-ssh
+
+
+vim:fen:tw=78:et:ts=8:ft=help:norl:
