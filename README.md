@@ -7,6 +7,8 @@ SYNOPSIS
 You can do SSH to a server via ctrlp.vim interface using this plugin.
 Note that this plugin is a ctrlp.vim extension and it requires a runner (*tmux* is currently only supported).
 
+![ctrlp-ssh][1]
+
 
 PREMISE
 ----------
@@ -58,3 +60,5 @@ LICENSE
 -------
 
 Copyright (c) 2013 Takahiro Yoshihara. Distributed under the Modified BSD License.
+
+[1]: http://i.imgur.com/w8jCPm1.png
