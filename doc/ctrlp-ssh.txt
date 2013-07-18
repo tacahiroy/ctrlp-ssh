@@ -39,13 +39,13 @@ SETTINGS					*ctrlp-ssh-settings*
 You can customise behaviour of ctrlp-ssh using these variables.
 
 
-						*g:ctrlp_ssh_known_hosts_file*
+						*g:ctrlp_ssh_server_list_file*
 This is the path to known_hosts file or a something similar file.
 If you would not like to specify $HOME/.ssh/known_hosts file, then you can
 specify a file which includes a host name in each line.
 By default, this is set known_hosts file located in your home directory.
 >
-	let g:ctrlp_ssh_known_hosts_file = $HOME . '/.ssh/known_hosts'
+	let g:ctrlp_ssh_server_list_file = $HOME . '/.ssh/known_hosts'
 <
 						*g:ctrlp_ssh_runner*
 This is a runner which opens a SSH window.
@@ -64,7 +64,7 @@ THANKS						*ctrlp-ssh-thanks*
 ==============================================================================
 CHANGELOG 					*ctrlp-ssh-changelog*
 
-30 Jul 2013~
+19 Jul 2013~
   + Initial release.
 
 

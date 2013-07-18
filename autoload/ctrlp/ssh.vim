@@ -82,7 +82,7 @@ function! s:get_runner()
 endfunction
 
 function! s:hosts()
-  let lines = readfile(s:known_hosts_file)
+  let lines = readfile(s:server_list_file)
 
   let hosts = []
   for l in lines
@@ -106,7 +106,7 @@ endfunction
 " Set options to internal variables
 "
 function! ctrlp#ssh#optparse()
-  let s:known_hosts_file = get(g:, 'ctrlp_ssh_known_hosts_file', $HOME . '/.ssh/known_hosts')
+  let s:server_list_file = get(g:, 'ctrlp_ssh_server_list_file', $HOME . '/.ssh/known_hosts')
   let s:debug = get(g:, 'ctrlp_ssh_debug', 0)
 
   try | let s:runner = s:get_runner()
