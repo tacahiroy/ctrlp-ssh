@@ -61,4 +61,4 @@ LICENSE
 
 Copyright (c) 2013 Takahiro Yoshihara. Distributed under the Modified BSD License.
 
-[1]: http://i.imgur.com/g1rgYvy.png
+[1]: http://i.imgur.com/PvIvax0.png
