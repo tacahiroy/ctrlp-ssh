@@ -48,5 +48,5 @@ endfunction
 " Return the instance
 "
 function! ctrlp#ssh#runner#tmux#new()
-  return s:tmux
+  return deepcopy(s:tmux)
 endfunction
