@@ -36,13 +36,18 @@ endfunction
 function! s:tmux.go(cmd, opts) dict
   if self.is_running()
     let res = ctrlp#ssh#utils#system(printf('tmux %s %s "%s"', a:opts.open, join(a:opts.args, ' '), a:cmd))
-    if res.err
-      echomsg res.out
+    if res.err | echomsg res.out | return | endif
+    if ctrlp#ssh#is_keep_ctrlp_window()
+      call self.last_window()
     endif
   else
     echomsg 'ERR: tmux is not running'
     return
   endif
+endfunction
+
+function! s:tmux.last_window()
+  call ctrlp#ssh#utils#system('tmux last')
 endfunction
 
 " Return the instance

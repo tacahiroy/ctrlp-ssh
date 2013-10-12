@@ -13,8 +13,8 @@ Note that this plugin is a ctrlp.vim extension and it requires a runner (*tmux* 
 PREMISE
 ----------
 First, I believe you're a user of a great Vim plugin [ctrlp.vim](https://github.com/kien/ctrlp.vim).
-Otherwise, you need to install it before start installing this plugin.
-Second, this plugin requires tmux to open a new SSH window.
+Otherwise, you must install it before start installing this plugin.
+Second, this plugin requires tmux to open a new SSH window for now.
 
 
 INSTALLATION

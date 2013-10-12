@@ -1,7 +1,7 @@
 *ctrlp-ssh.txt*
 A ctrlp.vim extension - SSH via ctrlp.vim interface
-Version: 0.0.1
-Author:  Takahiro Yoshihara <http://github.com/tacahiroy>
+Version: 0.1.0
+Author:  Takahiro Yoshihara <https://github.com/tacahiroy>
 
 
 ==============================================================================
@@ -47,9 +47,21 @@ By default, this is set known_hosts file located in your home directory.
 >
 	let g:ctrlp_ssh_server_list_file = $HOME . '/.ssh/known_hosts'
 <
+
+						*g:ctrlp_ssh_keep_ctrlp_window*
+If this is set to 1, |ctrlp-ssh| keeps ctrlp window open after you select a host.
+Therefore, you can open SSH connection one after another.
+In this case, to close the window, please note that you need to press <Esc>,
+<C-c> or <C-g> by default.
+(default: 0)
+>
+	let g:ctrlp_ssh_keep_ctrlp_window = 1
+<
+
 						*g:ctrlp_ssh_runner*
 This is a runner which opens a SSH window.
 Currently, only the default value 'tmux' can be specified.
+(default: 'tmux')
 >
 	let g:ctrlp_ssh_runner = 'tmux'
 <
@@ -64,6 +76,9 @@ THANKS						*ctrlp-ssh-thanks*
 ==============================================================================
 CHANGELOG 					*ctrlp-ssh-changelog*
 
+12 Oct 2013~
+  + New option: |g:ctrlp_ssh_keep_ctrlp_window|
+  
 19 Jul 2013~
   + Initial release.
 

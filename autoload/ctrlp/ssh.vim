@@ -108,6 +108,7 @@ endfunction
 function! ctrlp#ssh#optparse()
   let s:server_list_file = get(g:, 'ctrlp_ssh_server_list_file', $HOME . '/.ssh/known_hosts')
   let s:debug = get(g:, 'ctrlp_ssh_debug', 0)
+  let s:keep_ctrlp_window = get(g:, 'ctrlp_ssh_keep_ctrlp_window', 0)
 
   try | let s:runner = s:get_runner()
   catch /^No such autoload/
@@ -127,12 +128,13 @@ function! ctrlp#ssh#accept(mode, str)
 
   call s:runner.go(printf('ssh %s -p %d', host, port), opts)
 
-  " always back to former window
-  call ctrlp#ssh#close(a:mode, a:str)
+  if !ctrlp#ssh#is_keep_ctrlp_window()
+    call ctrlp#exit()
+  endif
 endfunction
 
-function! ctrlp#ssh#close(action, line)
-  call ctrlp#exit()
+function! ctrlp#ssh#is_keep_ctrlp_window()
+  return s:keep_ctrlp_window
 endfunction
 
 function! ctrlp#ssh#previewable()
