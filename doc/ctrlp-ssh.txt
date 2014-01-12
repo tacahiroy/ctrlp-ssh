@@ -36,7 +36,7 @@ Defining a mapping for this command should be useful. >
 
 ==============================================================================
 SETTINGS					*ctrlp-ssh-settings*
-You can customise behaviour of ctrlp-ssh using these variables.
+You can customise behaviour of |ctrlp-ssh| using these variables.
 
 
 						*g:ctrlp_ssh_server_list_file*
@@ -76,9 +76,12 @@ THANKS						*ctrlp-ssh-thanks*
 ==============================================================================
 CHANGELOG 					*ctrlp-ssh-changelog*
 
+13 Jan 2014~
+  + Add ability to scroll ctrlp.vim buffer head to tail
+
 12 Oct 2013~
   + New option: |g:ctrlp_ssh_keep_ctrlp_window|
-  
+
 19 Jul 2013~
   + Initial release.
 
@@ -88,7 +91,7 @@ LICENSE						*ctrlp-ssh-license*
 
 |ctrlp-ssh| is released under the Modified BSD License.
 
-Copyright (c) 2013, Takahiro Yoshihara All rights reserved.
+Copyright (c) 2013-2014, Takahiro Yoshihara All rights reserved.
 
 Redistribution and use in source and binary forms, with or without modification,
 are permitted provided that the following conditions are met:
