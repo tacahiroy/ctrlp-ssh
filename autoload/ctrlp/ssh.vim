@@ -34,6 +34,7 @@ let s:ext_vars = {
   \ 'lname':  'ssh',
   \ 'sname':  'ssh',
   \ 'type':   'path',
+  \ 'nolim':  1,
   \ 'sort':   1
   \ }
 
