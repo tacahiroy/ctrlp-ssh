@@ -19,18 +19,18 @@ Second, this plugin requires tmux to open a new SSH window for now.
 
 INSTALLATION
 ----------
-If you use [Vundle](https://github.com/gmarik/vundle.git) you can install this plugin using following Vim command:
+### [Vundle](https://github.com/gmarik/vundle.git)
 
     :BundleInstall tacahiroy/ctrlp-ssh
 
 In addition, don't forget put a line `Bundle 'tacahiroy/ctrlp-ssh'` into your _.vimrc_.
 
-If you use [pathogen.vim](https://github.com/tpope/vim-pathogen), you can do install this plugin with these commands:
+### [pathogen.vim](https://github.com/tpope/vim-pathogen)
 
-    cd ~/.vim/bundle
-    git clone git://github.com/tacahiroy/ctrlp-ssh.git
+    $ cd ~/.vim/bundle
+    $ git clone git://github.com/tacahiroy/ctrlp-ssh.git
 
-You don't use either plugin management systems, copy _autoload_ and _plugin_ directory to your _.vim_ directory.
+If you don't use either plugin management systems, copy _autoload_ and _plugin_ directory to your _.vim_ directory.
 
 
 CONFIGURATION
@@ -45,7 +45,7 @@ Or if you already use other ctrlp.vim extensions you need to do like this:
 
 Then restart Vim and you can use `:CtrlPSSH` command.
 
-It might be useful mapping like:
+It might be useful configuring mapping like:
 
     nnoremap <Leader>fs :CtrlPSSH<Cr>
 
@@ -59,6 +59,6 @@ LINK
 LICENSE
 -------
 
-Copyright (c) 2013 Takahiro Yoshihara. Distributed under the Modified BSD License.
+Copyright (c) 2013-2014 Takahiro Yoshihara. Distributed under the Modified BSD License.
 
 [1]: http://i.imgur.com/PvIvax0.png
