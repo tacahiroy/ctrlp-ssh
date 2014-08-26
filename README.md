@@ -19,11 +19,11 @@ Second, this plugin requires tmux to open a new SSH window for now.
 
 INSTALLATION
 ----------
-### [Vundle](https://github.com/gmarik/vundle.git)
+### [Vundle](https://github.com/gmarik/Vundle.vim)
 
-    :BundleInstall tacahiroy/ctrlp-ssh
+    :PluginInstall tacahiroy/ctrlp-ssh
 
-In addition, don't forget put a line `Bundle 'tacahiroy/ctrlp-ssh'` into your _.vimrc_.
+In addition, don't forget put a line `Plugin 'tacahiroy/ctrlp-ssh'` into your _.vimrc_.
 
 ### [pathogen.vim](https://github.com/tpope/vim-pathogen)
 
@@ -41,7 +41,7 @@ You need to make this plugin available as a ctrlp.vim extension. Please add *ssh
 
 Or if you already use other ctrlp.vim extensions you need to do like this:
 
-    let g:ctrlp_extensions = [ 'funky', 'ssh' ]
+    let g:ctrlp_extensions = ['funky', 'ssh']
 
 Then restart Vim and you can use `:CtrlPSSH` command.
 
@@ -53,7 +53,7 @@ It might be useful configuring mapping like:
 LINK
 --------------
 
-* [kien/ctrlp.vim](https://github.com/kien/ctrlp.vim)
+* [ctrlpvim/ctrlp.vim](https://github.com/ctrlpvim/ctrlp.vim)
 
 
 LICENSE
