@@ -24,12 +24,13 @@ This depends on tmux to open a new SSH window.
 ==============================================================================
 COMMANDS					*ctrlp-ssh-commands*
 
-This plugin provides just one command named |:CtrlPSSH|. Just execute it.
+This plugin provides just one command named |:CtrlPSSH|.
 
 						*ctrlp-ssh-:CtrlPSSH*
 :CtrlPSSH
 
-Defining a mapping for this command should be useful. >
+It's useful to define a key mapping for this command: >
+
 	nnoremap <Leader>fs :CtrlPSSH<Cr>
 <
 
@@ -71,6 +72,9 @@ Currently, only the default value 'tmux' can be specified.
 THANKS						*ctrlp-ssh-thanks*
 
   * kien <https://github.com/kien> - the author of ctrlp.vim
+
+If Kien didn't create ctrlp.vim this plugin can't be exist!
+Many thanks to Kien.
 
 
 ==============================================================================
