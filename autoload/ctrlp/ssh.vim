@@ -61,7 +61,7 @@ function! s:parseline(line)
 endfunction
 
 function! s:is_autoload(autoload)
-  let path = substitute(a:autoload, '#', '/', 'g') . '.vim'
+  let path = 'autoload/' . substitute(a:autoload, '#', '/', 'g') . '.vim'
   return !empty(globpath(&runtimepath, path))
 endfunction
 
