@@ -13,41 +13,36 @@ Note that this plugin is a ctrlp.vim extension and it requires a runner (*tmux* 
 PREMISE
 ----------
 First, I believe you're a user of a great Vim plugin [ctrlp.vim](https://github.com/kien/ctrlp.vim).
-Otherwise, you must install it before start installing this plugin.
+Otherwise, you must install it before start using this plugin.
 Second, this plugin requires tmux to open a new SSH window for now.
 
 
 INSTALLATION
 ----------
 ### [Vundle](https://github.com/gmarik/Vundle.vim)
-
+```vim
     :PluginInstall tacahiroy/ctrlp-ssh
+```
 
 In addition, don't forget put a line `Plugin 'tacahiroy/ctrlp-ssh'` into your _.vimrc_.
 
 ### [pathogen.vim](https://github.com/tpope/vim-pathogen)
-
+```sh
     $ cd ~/.vim/bundle
     $ git clone git://github.com/tacahiroy/ctrlp-ssh.git
+```
 
 If you don't use either plugin management systems, copy _autoload_ and _plugin_ directory to your _.vim_ directory.
 
 
 CONFIGURATION
 ----------
-You need to make this plugin available as a ctrlp.vim extension. Please add *ssh* to a variable `g:ctrlp_extensions`.
+After finished the install process, you may restart Vim and then you can use `:CtrlPSSH` command.
 
-    let g:ctrlp_extensions = ['ssh']
-
-Or if you already use other ctrlp.vim extensions you need to do like this:
-
-    let g:ctrlp_extensions = ['funky', 'ssh']
-
-Then restart Vim and you can use `:CtrlPSSH` command.
-
-It might be useful configuring mapping like:
-
+It's useful to define a key mapping like this:
+```vim
     nnoremap <Leader>fs :CtrlPSSH<Cr>
+```
 
 
 LINK
@@ -59,6 +54,6 @@ LINK
 LICENSE
 -------
 
-Copyright (c) 2013-2014 Takahiro Yoshihara. Distributed under the Modified BSD License.
+Copyright (c) 2013-2015 Takahiro Yoshihara. Distributed under the Modified BSD License.
 
 [1]: http://i.imgur.com/PvIvax0.png
