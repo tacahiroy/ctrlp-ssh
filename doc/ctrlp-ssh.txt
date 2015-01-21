@@ -1,4 +1,4 @@
-*ctrlp-ssh.txt* *ctrlp-ssh*
+*ctrlp-ssh.txt*
 A ctrlp.vim extension - SSH via ctrlp.vim interface
 Version: 0.1.1
 Author:  Takahiro Yoshihara <https://github.com/tacahiroy>
