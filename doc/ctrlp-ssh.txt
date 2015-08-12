@@ -1,5 +1,5 @@
 *ctrlp-ssh.txt*
-A ctrlp.vim extension - SSH via ctrlp.vim interface
+A ctrlp.vim extension - open new SSH sessions via ctrlp.vim interface
 Version: 0.1.1
 Author:  Takahiro Yoshihara <https://github.com/tacahiroy>
 
@@ -19,7 +19,7 @@ CONTENTS					*ctrlp-ssh-contents* *ctrlp-ssh*
 INTRODUCTION					*ctrlp-ssh-intro*
 
 ctrl-ssh is an extension of ctrlp.vim.
-This depends on tmux to open a new SSH window.
+This depends on tmux to open a new SSH window currently.
 
 ==============================================================================
 COMMANDS					*ctrlp-ssh-commands*
@@ -50,8 +50,8 @@ By default, this is set known_hosts file located in your home directory.
 <
 
 						*g:ctrlp_ssh_keep_ctrlp_window*
-If this is set to 1, |ctrlp-ssh| keeps ctrlp window open after you select a host.
-Therefore, you can open SSH connection one after another.
+If this is set to 1, |ctrlp-ssh| keeps ctrlp window opening after you select a host.
+Using this you can open SSH connection one after another.
 In this case, to close the window, please note that you need to press <Esc>,
 <C-c> or <C-g> by default.
 (default: 0)
@@ -73,7 +73,7 @@ THANKS						*ctrlp-ssh-thanks*
 
   * kien <https://github.com/kien> - the author of ctrlp.vim
 
-If Kien didn't create ctrlp.vim this plugin can't be exist!
+If Kien didn't create ctrlp.vim this plugin wouldn't be existed.
 Many thanks to Kien.
 
 
