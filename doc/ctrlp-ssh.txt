@@ -9,6 +9,7 @@ CONTENTS					*ctrlp-ssh-contents* *ctrlp-ssh*
 
 |ctrlp-ssh-intro|		Introduction
 |ctrlp-ssh-commands|		Commands
+|ctrlp-ssh-key-mappings|	Key Mappings
 |ctrlp-ssh-settings|		Settings
 |ctrlp-ssh-changelog|		changelog
 |ctrlp-ssh-license|		License
@@ -24,15 +25,32 @@ This depends on tmux to open a new SSH window currently.
 ==============================================================================
 COMMANDS					*ctrlp-ssh-commands*
 
-This plugin provides just one command named |:CtrlPSSH|.
+This plugin provides just one command named |:CtrlPSSH| that lists hosts you
+can SSH.
 
 						*ctrlp-ssh-:CtrlPSSH*
 :CtrlPSSH
 
-It's useful to define a key mapping for this command: >
-
+It should be useful to define a key mapping for this command like this: 
+>
 	nnoremap <Leader>fs :CtrlPSSH<Cr>
 <
+
+==============================================================================
+KEY MAPPINGS					*ctrlp-ssh-key-mappings*
+
+You can open a new SSH session with a new window (like tab in tmux), vertical /
+horizontal split pane.
+Here's default key mappings:
+
+<Cr> or <C-t>			into a new window
+<C-x> or <C-Cr> or <C-s>	into a horizontal split pane
+<C-v>				into a vertical split pane
+
+Basically, these key mappings depend on ctrlp.vim's mappings, so you can
+change these keys to others using |g:ctrlp_prompt_mappings|.
+Note that configurations in |g:ctrlp_prompt_mappings| affect ctrlp.vim world
+widely.
 
 
 ==============================================================================
@@ -79,6 +97,9 @@ Many thanks to Kien.
 
 ==============================================================================
 CHANGELOG 					*ctrlp-ssh-changelog*
+
+12 Aug 2015~
+  + Add doc how to open a new window, horizontal / vertical pane (#2)
 
 15 Jan 2014~
   + Fix a stupid error, No such autoload function - ctrlp#ssh#runner#tmux (#1)
